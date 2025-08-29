@@ -11,3 +11,11 @@
 
 # Change the array nums such that the first k elements of nums contain the unique elements in the order they were present in nums initially. The remaining elements of nums are not important as well as the size of nums.
 # Return k.
+# def removeDuplicates(self, nums: List[int]) -> int:
+#         n = len(nums)
+#         i = 0
+#         for j in range (1,n):
+#             if nums[j] != nums[i]:
+#                 nums[i+1] = nums[j]
+#                 i+=1
+#         return i+1
