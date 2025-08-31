@@ -43,3 +43,4 @@
 #             XOR2 ^= nums[i]
 #         XOR1 = XOR1 ^ N
 #         return XOR1 ^ XOR2
+# bitwise concept
