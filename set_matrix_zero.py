@@ -32,3 +32,37 @@
 
 # Time Complexity: O(m * n)
 # Space Complexity: O(1)
+# brute force set matrix zero 
+# ✅ Brute Force Idea:
+
+# For every element in the matrix, if it’s zero, mark its row and column to be set to zero later.
+
+# But if we directly set rows and columns to 0 as we find zeros, it will affect future checks.
+
+# So, we use an auxiliary matrix or special marker (e.g., a placeholder value like -1 or any number not in the matrix) to mark cells to be zeroed.
+
+# from typing import List
+
+# def setZeroes(matrix: List[List[int]]) -> None:
+#     n = len(matrix)
+#     m = len(matrix[0])
+    
+#     # Step 1: Create auxiliary matrix to store marks
+#     mark = [[False for _ in range(m)] for _ in range(n)]
+    
+#     # Step 2: Mark the cells to be zeroed
+#     for i in range(n):
+#         for j in range(m):
+#             if matrix[i][j] == 0:
+#                 mark[i][j] = True
+    
+#     # Step 3: For each marked cell, set entire row and column to zero
+#     for i in range(n):
+#         for j in range(m):
+#             if mark[i][j]:
+#                 # Set row to zero
+#                 for col in range(m):
+#                     matrix[i][col] = 0
+#                 # Set column to zero
+#                 for row in range(n):
+#                     matrix[row][j] = 0
