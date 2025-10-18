@@ -30,32 +30,32 @@
 # // Here we have removed the extra space that we take in brute force approach 
 # // Here we used Two pointer not to store element we used it to get medain 
 # class Solution:
-#     def findMedianSortedArrays(self, nums1, nums2):
-#         n1, n2 = len(nums1), len(nums2)
-#         n = n1 + n2
+def findMedianSortedArrays(self, nums1, nums2):
+        n1, n2 = len(nums1), len(nums2)
+        n = n1 + n2
 
-#         i = j = 0
-#         count = 0
-#         m1 = m2 = 0
+        i = j = 0
+        count = 0
+        m1 = m2 = 0
 
-#         median_pos1 = (n - 1) // 2
-#         median_pos2 = n // 2
+        median_pos1 = (n - 1) // 2
+        median_pos2 = n // 2
 
-#         while i < n1 or j < n2:
-#             if j >= n2 or (i < n1 and nums1[i] < nums2[j]):
-#                 val = nums1[i]
-#                 i += 1
-#             else:
-#                 val = nums2[j]
-#                 j += 1
+        while i < n1 or j < n2:
+            if j >= n2 or (i < n1 and nums1[i] < nums2[j]):
+                val = nums1[i]
+                i += 1
+            else:
+                val = nums2[j]
+                j += 1
 
-#             if count == median_pos1:
-#                 m1 = val
-#             if count == median_pos2:
-#                 m2 = val
-#                 break
-#             count += 1
+            if count == median_pos1:
+                m1 = val
+            if count == median_pos2:
+                m2 = val
+                break
+            count += 1
 
-#         return (m1 + m2) / 2.0
+        return (m1 + m2) / 2.0
 
 
